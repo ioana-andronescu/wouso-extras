@@ -16,7 +16,7 @@ import cdl.android.server.ApiRequests;
 
 
 public class Tops extends Activity {
-	private Helper tInfo;
+	private ArrayList<TopInfo> tInfo;
 	SharedPreferences tPreferences;
 	
 	public void onCreate(Bundle savedInstanceState) {

@@ -14,16 +14,17 @@ public class TopsAdapter extends BaseAdapter {
 	/** Array filled with list's elements */
 	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
-	OnClickListener uOnItemClick;
+	OnClickListener OnItemClick;
 	Context uContext;
 	/** Called when a list item is clicked */
 	OnClickListener tOnItemClick;
 	Context tContext;
-	public TopsAdapter(Context context, Helper tInfo, 
+	public TopsAdapter(Context context, ArrayList<TopInfo> tInfo, 
 			OnClickListener onItemClick) {
 		tItems = new ArrayList<TopInfo>();
 		tOnItemClick = onItemClick;
 		tContext = context;
+		tItems = tInfo;
 	}
 
 	public int getCount() {

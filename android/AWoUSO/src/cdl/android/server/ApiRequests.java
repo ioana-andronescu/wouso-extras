@@ -16,8 +16,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.R.array;
+
 import cdl.android.model.BazaarItem;
 import cdl.android.model.Qotd;
+import cdl.android.model.TopInfo;
 import cdl.android.model.UserInfo;
 import cdl.android.ui.top.Helper;
 
@@ -146,9 +149,23 @@ public class ApiRequests {
 		return qotd;
 	}
 	
-	public Helper getTop(String username) {
+/*	public Helper getTop(String username) {
 		JSONArray result = getArray(topUsersAPICallURL + username);
 		return new Helper(result);
+	} */
+	
+	public ArrayList<TopInfo> getTop(String username) {
+		ArrayList<TopInfo> items = new ArrayList<TopInfo>();
+		JSONArray result = getArray(topUsersAPICallURL + username);
+		try {
+			for(int i = 0; i < result.length(); i++) {
+				JSONObject player = result.getJSONObject(i);
+				items.add(new TopInfo(player));
+			}
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return items;
 	}
 	
 	//TODO 3: remove this, the bazaar info will be retrieved from a local config file 
