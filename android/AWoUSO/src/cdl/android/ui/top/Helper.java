@@ -13,6 +13,7 @@ public class Helper {
 			curPlayer.getString("points");
 			curPlayer.getString("last_name");
 			curPlayer.getString("first_name");
+			curPlayer.getString("id");
 		}
 		} catch(Exception ex) {
 			ex.printStackTrace();

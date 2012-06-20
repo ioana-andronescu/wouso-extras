@@ -2,10 +2,7 @@ package cdl.android.ui.top;
 
 import java.util.ArrayList;
 
-import cdl.android.model.BazaarItem;
 import cdl.android.model.TopInfo;
-import cdl.android.model.UserInfo;
-import cdl.android.ui.bazaar.BazaarItemView;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
