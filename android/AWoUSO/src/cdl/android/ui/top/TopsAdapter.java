@@ -15,20 +15,18 @@ import android.widget.BaseAdapter;
 public class TopsAdapter extends BaseAdapter {
 
 	/** Array filled with list's elements */
-	ArrayList<UserInfo> uInfo;
+	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
 	OnClickListener uOnItemClick;
 	Context uContext;
-	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
 	OnClickListener tOnItemClick;
 	Context tContext;
-	public TopsAdapter(Context context, ArrayList<TopInfo> items, 
+	public TopsAdapter(Context context, Helper tInfo, 
 			OnClickListener onItemClick) {
 		tItems = new ArrayList<TopInfo>();
 		tOnItemClick = onItemClick;
 		tContext = context;
-		tItems = items;
 	}
 
 	public int getCount() {

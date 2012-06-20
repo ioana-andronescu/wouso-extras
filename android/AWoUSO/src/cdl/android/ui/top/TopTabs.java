@@ -32,7 +32,7 @@ public class TopTabs extends TabActivity {
 			}
 		});
 		
-		intent = new Intent().setClass(this, Bazaar.class);
+		intent = new Intent().setClass(this, Tops.class);
 		spec = tabHost.newTabSpec("topseries").setIndicator("Top Series",
 				res.getDrawable(R.drawable.spell_purple))
 				.setContent(intent);

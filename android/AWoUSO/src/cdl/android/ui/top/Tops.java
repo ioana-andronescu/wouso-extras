@@ -1,4 +1,4 @@
-/*package cdl.android.ui.top;
+package cdl.android.ui.top;
 
 import java.util.ArrayList;
 
@@ -18,8 +18,8 @@ import cdl.android.ui.bazaar.BazaarAdapter;
 
 
 public class Tops extends Activity {
-	private TopInfo tInfo;
-	SharedPreferences uPreferences;
+	private Helper tInfo;
+	SharedPreferences tPreferences;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,11 +31,11 @@ public class Tops extends Activity {
 		String username = tPreferences.getString("username", null);
 		
 		ApiRequests req = new ApiRequests();
-		tInfo = req.getUserInfo(username);
-		tListView.setAdapter(new TopsAdapter(this, uInfo, new OnClickListener() {
+		tInfo = req.getTop(username);
+		tListView.setAdapter(new TopsAdapter(this, tInfo, new OnClickListener() {
 			public void onClick(View v) {
 			}
 		}));
 
 	}
-}*/
+}
