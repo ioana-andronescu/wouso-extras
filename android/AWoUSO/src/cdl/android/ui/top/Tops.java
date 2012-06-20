@@ -11,27 +11,28 @@ import android.view.View.OnClickListener;
 import android.widget.ListView;
 import cdl.android.R;
 import cdl.android.model.BazaarItem;
+import cdl.android.model.TopInfo;
 import cdl.android.model.UserInfo;
 import cdl.android.server.ApiRequests;
 import cdl.android.ui.bazaar.BazaarAdapter;
 
 
 public class Tops extends Activity {
-	private UserInfo uInfo;
+	private TopInfo tInfo;
 	SharedPreferences uPreferences;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tops);
 
-		ListView uListView = (ListView) findViewById(android.R.id.list);
-		uListView.setEmptyView(findViewById(android.R.id.empty));
-		uPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-		String username = uPreferences.getString("username", null);
+		ListView tListView = (ListView) findViewById(android.R.id.list);
+		tListView.setEmptyView(findViewById(android.R.id.empty));
+		tPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		String username = tPreferences.getString("username", null);
 		
 		ApiRequests req = new ApiRequests();
-		uInfo = req.getUserInfo(username);
-		uListView.setAdapter(new TopsAdapter(this, uInfo, new OnClickListener() {
+		tInfo = req.getUserInfo(username);
+		tListView.setAdapter(new TopsAdapter(this, uInfo, new OnClickListener() {
 			public void onClick(View v) {
 			}
 		}));
