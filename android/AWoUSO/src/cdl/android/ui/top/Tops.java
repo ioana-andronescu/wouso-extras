@@ -10,11 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
 import cdl.android.R;
-import cdl.android.model.BazaarItem;
 import cdl.android.model.TopInfo;
 import cdl.android.model.UserInfo;
 import cdl.android.server.ApiRequests;
-import cdl.android.ui.bazaar.BazaarAdapter;
 
 
 public class Tops extends Activity {
