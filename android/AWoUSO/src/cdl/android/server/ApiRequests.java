@@ -27,6 +27,7 @@ public class ApiRequests {
 	private String userInfoAPICallURL = "http://wouso-next.rosedu.org/api/info/?user=";
 	private String bazaarAPICallURL = "http://wouso-next.rosedu.org/api/bazaar/?user=";
 	private String qotdAPICallURL = "http://wouso-next.rosedu.org/api/qotd/today/?user=";
+	private String topUsersAPICallURL = "http://wouso-next.rosedu.org/api/top/group/?user=";
 
 	/**
 	 * Generic HTTP GET data request
@@ -98,6 +99,13 @@ public class ApiRequests {
 		JSONObject result = get(qotdAPICallURL);
 		Qotd qotd = new Qotd(result);
 		return qotd;
+	}
+	
+	public UserInfo getTop(String username) {
+		topUsersAPICallURL += username;
+		JSONObject result = get(topUsersAPICallURL);
+		UserInfo user = new UserInfo(result);
+		return user;
 	}
 
 	//TODO 3: remove this, the bazaar info will be retrieved from a local config file 
