@@ -15,7 +15,7 @@ import cdl.android.R;
  */
 public class TopsTabs extends TabActivity {
 
-	/*public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -52,5 +52,5 @@ public class TopsTabs extends TabActivity {
 		
 		tabHost.setCurrentTab(0);
 	}*/
-	
+	}	
 }

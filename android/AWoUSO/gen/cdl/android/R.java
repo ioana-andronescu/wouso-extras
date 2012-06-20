@@ -86,10 +86,13 @@ public final class R {
         public static final int chalMarker=0x7f040005;
         public static final int exchange_left=0x7f04000a;
         public static final int exchange_right=0x7f04000b;
+        public static final int firstname=0x7f040010;
+        public static final int lastname=0x7f040011;
         public static final int loginText=0x7f040001;
         public static final int logout=0x7f04000c;
         public static final int msgMarker=0x7f040006;
         public static final int passwd=0x7f040003;
+        public static final int points=0x7f040012;
         public static final int qotdMarker=0x7f040004;
         public static final int shopMarker=0x7f040007;
         public static final int spQuestMarker=0x7f040009;
