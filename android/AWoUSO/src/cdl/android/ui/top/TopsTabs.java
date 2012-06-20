@@ -15,7 +15,7 @@ import cdl.android.R;
  */
 public class TopsTabs extends TabActivity {
 
-	public void onCreate(Bundle savedInstanceState) {
+	/*public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -33,7 +33,7 @@ public class TopsTabs extends TabActivity {
 			}
 		});
 		
-		intent = new Intent().setClass(this, Tops.class);
+		intent = new Intent().setClass(this, TopsTabs.class);
 		spec = tabHost.newTabSpec("tops").setIndicator("Top users")
 				.setContent(intent);
 		tabHost.addTab(spec);
@@ -50,7 +50,7 @@ public class TopsTabs extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
-		tabHost.setCurrentTab(0);*/
-	}
+		tabHost.setCurrentTab(0);
+	}*/
 	
 }

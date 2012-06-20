@@ -19,16 +19,18 @@ import org.json.JSONObject;
 import cdl.android.model.BazaarItem;
 import cdl.android.model.Qotd;
 import cdl.android.model.UserInfo;
+import cdl.android.ui.top.Helper;
 
 /**
  * HTTP API requests to the WoUSO Server
  */
 public class ApiRequests {
+	private static final ArrayList<Object> Object = null;
 	private String userInfoAPICallURL = "http://wouso-next.rosedu.org/api/info/?user=";
 	private String bazaarAPICallURL = "http://wouso-next.rosedu.org/api/bazaar/?user=";
 	private String qotdAPICallURL = "http://wouso-next.rosedu.org/api/qotd/today/?user=";
 	private String topUsersAPICallURL = "http://wouso-next.rosedu.org/api/top/group/?user=";
-
+	private String topUsersAPICallURLPlayers = "http://wouso-next.rosedu.org/api/top/player/?user=";
 	/**
 	 * Generic HTTP GET data request
 	 * @param request
@@ -77,6 +79,49 @@ public class ApiRequests {
 
 		return jObject;
 	}
+	public JSONArray getArray(String req) {
+		JSONArray jObject = null;
+
+		/** HTTP request */
+		StringBuilder info = new StringBuilder();
+		HttpClient client = new DefaultHttpClient();
+		HttpGet request = new HttpGet(req);
+		HttpResponse response = null;
+
+		try {
+			response = client.execute(request);
+			int code = response.getStatusLine().getStatusCode();
+			System.out.println("code - " + code);
+
+			HttpEntity entity = response.getEntity();
+
+			if (entity != null) {
+				InputStream inStream = entity.getContent();
+				BufferedReader br = new BufferedReader(new InputStreamReader(
+						inStream), 8192);
+				String line;
+				while ((line = br.readLine()) != null) {
+					info.append(line + "\n");
+				}
+				System.out.println("Received " + info);
+			} else
+				return null;
+			
+		} catch (ClientProtocolException e) {
+			System.err.println("Exception: " + e.getMessage());
+		} catch (IOException e) {
+			System.err.println("Exception: " + e.getMessage());
+		}
+
+		/** TODO: Check invalid response from server or error */
+		try {
+			jObject = new JSONArray(info.toString());
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
+		return jObject;
+	}
 
 
 	/**
@@ -101,13 +146,15 @@ public class ApiRequests {
 		return qotd;
 	}
 	
-	public UserInfo getTop(String username) {
-		topUsersAPICallURL += username;
-		JSONObject result = get(topUsersAPICallURL);
-		UserInfo user = new UserInfo(result);
-		return user;
+	public Helper getTop(String username) {
+		JSONArray result = getArray(topUsersAPICallURL+username);
+		//UserInfo user = new UserInfo(result);
+		return new Helper(result);
 	}
-
+	
+		
+		
+	//}
 	//TODO 3: remove this, the bazaar info will be retrieved from a local config file 
 	public ArrayList<BazaarItem> getBazaar(String username) {
 		ArrayList<BazaarItem> items = new ArrayList<BazaarItem>();

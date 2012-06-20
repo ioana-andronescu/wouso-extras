@@ -1,4 +1,4 @@
-package cdl.android.ui.top;
+/*package cdl.android.ui.top;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -44,4 +44,4 @@ public class TopItemView extends LinearLayout {
 		});
 		
 	}
-}
+}*/
