@@ -22,6 +22,7 @@ import cdl.android.model.UserInfo;
 import cdl.android.server.ApiRequests;
 import cdl.android.server.Auth;
 import cdl.android.ui.bazaar.BazaarTabs;
+import cdl.android.ui.top.TopTabs;
 
 /** 
  * User's profile and main application menu 
@@ -63,9 +64,11 @@ public class MainMenu extends Activity {
         playerLevel.setImageResource(R.drawable.levelex);
         
         final Intent bazaarMenu = new Intent(this, BazaarTabs.class);
+        final Intent topMenu = new Intent(this, TopTabs.class);
         Button bazaarButton = (Button) findViewById(R.id.shopbtn);
         Button qotdButton = (Button) findViewById(R.id.qotdbtn);
         Button specialQuest = (Button) findViewById(R.id.spcQbtn);
+        Button topButton = (Button) findViewById(R.id.topbtn);
         Button logoutButton = (Button) findViewById(R.id.logtbtn);
 
         final Toast weekQ = Toast.makeText(getApplicationContext(), 
@@ -83,6 +86,12 @@ public class MainMenu extends Activity {
 				weekQ.show();
 			}
 		});
+        
+        topButton.setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+        		startActivity(topMenu);
+        	}
+        });
                 
         qotdButton.setOnClickListener(new OnClickListener() {
         	//TODO 1: Handle Question of the Day

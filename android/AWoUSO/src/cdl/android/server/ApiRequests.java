@@ -147,14 +147,10 @@ public class ApiRequests {
 	}
 	
 	public Helper getTop(String username) {
-		JSONArray result = getArray(topUsersAPICallURL+username);
-		//UserInfo user = new UserInfo(result);
+		JSONArray result = getArray(topUsersAPICallURL + username);
 		return new Helper(result);
 	}
 	
-		
-		
-	//}
 	//TODO 3: remove this, the bazaar info will be retrieved from a local config file 
 	public ArrayList<BazaarItem> getBazaar(String username) {
 		ArrayList<BazaarItem> items = new ArrayList<BazaarItem>();
