@@ -1,4 +1,4 @@
-/*package cdl.android.ui.top;
+package cdl.android.ui.top;
 
 import java.util.ArrayList;
 
@@ -15,18 +15,14 @@ import android.widget.BaseAdapter;
 public class TopsAdapter extends BaseAdapter {
 
 	/** Array filled with list's elements */
-<<<<<<< HEAD
-	/*ArrayList<UserInfo> uInfo;
+	ArrayList<UserInfo> uInfo;
 	/** Called when a list item is clicked */
-	/*OnClickListener uOnItemClick;
+	OnClickListener uOnItemClick;
 	Context uContext;
-=======
 	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
 	OnClickListener tOnItemClick;
 	Context tContext;
->>>>>>> 3fe047a4e3cf5a9a1bc5d8ae0d9e14056cbb2c83
-
 	public TopsAdapter(Context context, ArrayList<TopInfo> items, 
 			OnClickListener onItemClick) {
 		tItems = new ArrayList<TopInfo>();
@@ -56,9 +52,4 @@ public class TopsAdapter extends BaseAdapter {
 
 		return item;
 	}
-<<<<<<< HEAD
-	
-}*/
-=======
 }
->>>>>>> 3fe047a4e3cf5a9a1bc5d8ae0d9e14056cbb2c83
