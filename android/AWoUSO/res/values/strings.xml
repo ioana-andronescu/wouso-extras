@@ -36,8 +36,8 @@
     <string name="topseries">Top Series</string>
     <string name="topgroups">Top Groups</string>
     <string name="topusers">Top Users</string>
-    <string name="firstname">prenume</string>
-    <string name="lastname">nume</string>
-    <string name="points">puncte</string>
+    <string name="firstname">Prenume</string>
+    <string name="lastname">Nume</string>
+    <string name="points">Puncte</string>
 
 </resources>

@@ -8,22 +8,20 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import cdl.android.R;
-import cdl.android.model.BazaarItem;
 import cdl.android.model.TopInfo;
-import cdl.android.model.UserInfo;
 
-public class TopInfoView extends LinearLayout {
+public class TopItemView extends LinearLayout {
 	TopInfo tInfo;
 	Context tContext;
 	
-	public TopInfoView(Context context, TopInfo tInfo) {
+	public TopItemView(Context context, TopInfo item) {
 		super(context);
 		tContext = context;
-		this.tInfo = tInfo;
+		this.tInfo = item;
 		
 		LayoutInflater layoutInflater = (LayoutInflater) 
 		getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		layoutInflater.inflate(R.layout.bazaar_list_item, this, true);
+		layoutInflater.inflate(R.layout.tops_list_item, this, true);
 		
 		TextView firstName = (TextView) findViewById(R.string.firstname);
 		firstName.setText(tInfo.getFirstName());
@@ -33,10 +31,5 @@ public class TopInfoView extends LinearLayout {
 		
 		TextView points = (TextView) findViewById(R.string.points);
 		points.setText(tInfo.getPoints());
-		
-		//TextView serie = (TextView) findViewById(R.string.serie);
-		//serie.setText(tInfo.);
-		
-		
 	}
 }

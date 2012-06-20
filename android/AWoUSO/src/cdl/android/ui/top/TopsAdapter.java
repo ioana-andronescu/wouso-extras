@@ -14,17 +14,15 @@ public class TopsAdapter extends BaseAdapter {
 	/** Array filled with list's elements */
 	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
-	OnClickListener OnItemClick;
-	Context uContext;
-	/** Called when a list item is clicked */
 	OnClickListener tOnItemClick;
 	Context tContext;
-	public TopsAdapter(Context context, ArrayList<TopInfo> tInfo, 
+	
+	public TopsAdapter(Context context, ArrayList<TopInfo> items, 
 			OnClickListener onItemClick) {
 		tItems = new ArrayList<TopInfo>();
 		tOnItemClick = onItemClick;
 		tContext = context;
-		tItems = tInfo;
+		tItems = items;
 	}
 
 	public int getCount() {
@@ -40,9 +38,9 @@ public class TopsAdapter extends BaseAdapter {
 	}
 
 	public View getView(int index, View convertView, ViewGroup parent) {
-		TopInfoView item;
+		TopItemView item;
 
-		item = new TopInfoView(tContext, tItems.get(index));
+		item = new TopItemView(tContext, tItems.get(index));
 		item.setOnClickListener(tOnItemClick);
 		item.setClickable(true);
 

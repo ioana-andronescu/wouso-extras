@@ -33,30 +33,13 @@
             android:name=".ui.main.MainMenu"
             android:screenOrientation="portrait" >
         </activity>
-    </application>
-    
-    <application
-        android:icon="@drawable/androidicon"
-        android:label="@string/app_name" >
-        <activity
-            android:name=".ui.main.AWoUSOActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".ui.top.TopGroups" >
         </activity>
-        <activity android:name=".ui.top.Tops" > 
-		</activity>
-        <activity android:name=".ui.top.TopTabs" >
+        <activity android:name=".ui.top.TopSeries" >
         </activity>
         <activity android:name=".ui.top.TopUsers" >
         </activity>
-        <activity
-            android:name=".ui.main.MainMenu"
-            android:screenOrientation="portrait" >
+        <activity android:name=".ui.top.TopTabs" >
         </activity>
     </application>
 

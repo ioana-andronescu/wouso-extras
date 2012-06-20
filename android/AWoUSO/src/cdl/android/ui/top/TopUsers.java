@@ -12,7 +12,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import cdl.android.R;
 import cdl.android.model.TopInfo;
-import cdl.android.model.UserInfo;
 import cdl.android.server.ApiRequests;
 
 

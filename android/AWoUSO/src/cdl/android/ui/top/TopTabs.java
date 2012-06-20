@@ -9,9 +9,6 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TabHost;
 import cdl.android.R;
-import cdl.android.ui.bazaar.Bazaar;
-import cdl.android.ui.bazaar.Exchange;
-import cdl.android.ui.bazaar.Summary;
 
 public class TopTabs extends TabActivity {
 	public void onCreate(Bundle savedInstanceState) {
@@ -32,9 +29,21 @@ public class TopTabs extends TabActivity {
 			}
 		});
 		
-		intent = new Intent().setClass(this, TopUsers.class);
-		spec = tabHost.newTabSpec("tops").setIndicator("Top",
+		intent = new Intent().setClass(this, TopSeries.class);
+		spec = tabHost.newTabSpec("topseries").setIndicator("Top Series",
 				res.getDrawable(R.drawable.spell_purple))
+				.setContent(intent);
+		tabHost.addTab(spec);
+		
+		intent = new Intent().setClass(this, TopGroups.class);
+		spec = tabHost.newTabSpec("topgroups").setIndicator("Top Series",
+				res.getDrawable(R.drawable.spell_yellow))
+				.setContent(intent);
+		tabHost.addTab(spec);
+		
+		intent = new Intent().setClass(this, TopUsers.class);
+		spec = tabHost.newTabSpec("topusers").setIndicator("Top Users",
+				res.getDrawable(R.drawable.spell_green))
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
