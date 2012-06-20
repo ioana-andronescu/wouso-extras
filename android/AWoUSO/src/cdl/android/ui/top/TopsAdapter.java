@@ -3,6 +3,7 @@ package cdl.android.ui.top;
 import java.util.ArrayList;
 
 import cdl.android.model.BazaarItem;
+import cdl.android.model.TopInfo;
 import cdl.android.model.UserInfo;
 import cdl.android.ui.bazaar.BazaarItemView;
 import android.content.Context;
@@ -14,39 +15,38 @@ import android.widget.BaseAdapter;
 public class TopsAdapter extends BaseAdapter {
 
 	/** Array filled with list's elements */
-	ArrayList<UserInfo> uInfo;
+	ArrayList<TopInfo> tItems;
 	/** Called when a list item is clicked */
-	OnClickListener uOnItemClick;
-	Context uContext;
+	OnClickListener tOnItemClick;
+	Context tContext;
 
-	public TopsAdapter(Context context, ArrayList<UserInfo> items, 
+	public TopsAdapter(Context context, ArrayList<TopInfo> items, 
 			OnClickListener onItemClick) {
-		uInfo = new ArrayList<UserInfo>();
-		uOnItemClick = onItemClick;
-		uContext = context;
-		uInfo = items;
+		tItems = new ArrayList<TopInfo>();
+		tOnItemClick = onItemClick;
+		tContext = context;
+		tItems = items;
 	}
 
 	public int getCount() {
-		return uInfo.size();
+		return tItems.size();
 	}
 
 	public Object getItem(int index) {
-		return uInfo.get(index);
+		return tItems.get(index);
 	}
 
-	public long getUserId(int index) {
+	public long getItemId(int index) {
 		return index;
 	}
 
 	public View getView(int index, View convertView, ViewGroup parent) {
-		TopItemView item;
+		TopInfoView item;
 
-		user = new TopUserView(uContext, uInfo.get(index));
-		uInfo.setOnClickListener(uOnItemClick);
-		uInfo.setClickable(true);
+		item = new TopInfoView(tContext, tItems.get(index));
+		item.setOnClickListener(tOnItemClick);
+		item.setClickable(true);
 
-		return uInfo;
+		return item;
 	}
-	
 }
