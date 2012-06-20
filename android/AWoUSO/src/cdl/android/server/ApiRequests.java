@@ -22,7 +22,6 @@ import cdl.android.model.BazaarItem;
 import cdl.android.model.Qotd;
 import cdl.android.model.TopInfo;
 import cdl.android.model.UserInfo;
-import cdl.android.ui.top.Helper;
 
 /**
  * HTTP API requests to the WoUSO Server
