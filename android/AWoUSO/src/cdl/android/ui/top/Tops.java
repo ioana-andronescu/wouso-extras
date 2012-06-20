@@ -17,12 +17,12 @@ import cdl.android.ui.bazaar.BazaarAdapter;
 
 
 public class Tops extends Activity {
-	private ArrayList<UserInfo> uInfo;
+	private UserInfo uInfo;
 	SharedPreferences uPreferences;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.tab_view);
+		setContentView(R.layout.tops);
 
 		ListView uListView = (ListView) findViewById(android.R.id.list);
 		uListView.setEmptyView(findViewById(android.R.id.empty));

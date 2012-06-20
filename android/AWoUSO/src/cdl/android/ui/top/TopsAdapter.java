@@ -14,39 +14,39 @@ import android.widget.BaseAdapter;
 public class TopsAdapter extends BaseAdapter {
 
 	/** Array filled with list's elements */
-	ArrayList<UserInfo> mItems;
+	ArrayList<UserInfo> uInfo;
 	/** Called when a list item is clicked */
-	OnClickListener mOnItemClick;
-	Context mContext;
+	OnClickListener uOnItemClick;
+	Context uContext;
 
 	public TopsAdapter(Context context, ArrayList<UserInfo> items, 
 			OnClickListener onItemClick) {
-		mItems = new ArrayList<UserInfo>();
-		mOnItemClick = onItemClick;
-		mContext = context;
-		mItems = items;
+		uInfo = new ArrayList<UserInfo>();
+		uOnItemClick = onItemClick;
+		uContext = context;
+		uInfo = items;
 	}
 
 	public int getCount() {
-		return mItems.size();
+		return uInfo.size();
 	}
 
 	public Object getItem(int index) {
-		return mItems.get(index);
+		return uInfo.get(index);
 	}
 
-	public long getItemId(int index) {
+	public long getUserId(int index) {
 		return index;
 	}
 
 	public View getView(int index, View convertView, ViewGroup parent) {
-		BazaarItemView item;
+		TopItemView item;
 
-		item = new TopsItemView(mContext, mItems.get(index));
-		item.setOnClickListener(mOnItemClick);
-		item.setClickable(true);
+		user = new TopUserView(uContext, uInfo.get(index));
+		uInfo.setOnClickListener(uOnItemClick);
+		uInfo.setClickable(true);
 
-		return item;
+		return uInfo;
 	}
 	
 }
