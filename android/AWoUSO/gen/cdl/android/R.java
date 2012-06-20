@@ -78,6 +78,7 @@ public final class R {
         public static final int profileoverlay=0x7f030005;
         public static final int tab_layout=0x7f030006;
         public static final int tab_view=0x7f030007;
+        public static final int tops=0x7f030008;
     }
     public static final class string {
         public static final int account=0x7f040002;
