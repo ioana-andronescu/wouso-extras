@@ -25,9 +25,18 @@ public class TopInfoView extends LinearLayout {
 		getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		layoutInflater.inflate(R.layout.tops, this, true);
 		
-		TextView firstName = (TextView) findViewById(R.string.topgroups);
+		TextView firstName = (TextView) findViewById(R.string.firstname);
 		firstName.setText(tInfo.getFirstName());
-
+		
+		TextView lastName = (TextView) findViewById(R.string.lastname);
+		lastName.setText(tInfo.getLastName());
+		
+		TextView points = (TextView) findViewById(R.string.points);
+		points.setText(tInfo.getPoints());
+		
+		//TextView serie = (TextView) findViewById(R.string.serie);
+		//serie.setText(tInfo.);
+		
 		
 	}
 }
