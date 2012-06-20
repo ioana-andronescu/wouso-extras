@@ -11,6 +11,6 @@ public class TopSeries extends Activity {
 	
 		TextView textview = new TextView(this);
 		textview.setText("This is the Top Series tab");
-	//	setContentView(R.layout.topseries);
+		setContentView(R.layout.topseries);
 	}
 }

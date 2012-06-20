@@ -33,20 +33,8 @@ public class TopTabs extends TabActivity {
 		});
 		
 		intent = new Intent().setClass(this, Tops.class);
-		spec = tabHost.newTabSpec("topseries").setIndicator("Top Series",
+		spec = tabHost.newTabSpec("tops").setIndicator("Top",
 				res.getDrawable(R.drawable.spell_purple))
-				.setContent(intent);
-		tabHost.addTab(spec);
-		
-		intent = new Intent().setClass(this, Exchange.class);
-		spec = tabHost.newTabSpec("topgroups").setIndicator("Top Groups",
-				res.getDrawable(R.drawable.spell_yellow))
-				.setContent(intent);
-		tabHost.addTab(spec);
-		
-		intent = new Intent().setClass(this, Summary.class);
-		spec = tabHost.newTabSpec("topusers").setIndicator("Top Users",
-				res.getDrawable(R.drawable.spell_green))
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
