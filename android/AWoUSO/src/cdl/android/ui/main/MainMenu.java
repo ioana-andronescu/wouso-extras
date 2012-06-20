@@ -109,6 +109,8 @@ public class MainMenu extends Activity {
 			}
 		});
         
+        
+        
         logoutButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Auth authHelper = new Auth(v.getContext());
