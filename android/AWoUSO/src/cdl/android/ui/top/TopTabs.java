@@ -36,7 +36,7 @@ public class TopTabs extends TabActivity {
 		tabHost.addTab(spec);
 		
 		intent = new Intent().setClass(this, TopGroups.class);
-		spec = tabHost.newTabSpec("topgroups").setIndicator("Top Series",
+		spec = tabHost.newTabSpec("topgroups").setIndicator("Top Groups",
 				res.getDrawable(R.drawable.spell_yellow))
 				.setContent(intent);
 		tabHost.addTab(spec);

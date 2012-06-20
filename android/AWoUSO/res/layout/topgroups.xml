@@ -16,75 +16,80 @@
             android:text="@string/topgroups" />
     </LinearLayout>
     
-    <LinearLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content" >
+               
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+	        android:orientation="vertical" >
 
-        <Button
-            style="@style/BlueButton"
-            android:text="CA311" />
+        	<Button
+            	style="@style/BlueButton"
+           		android:text="CA311" />
 
-        <Button
-            style="@style/BlueButton"
-            android:text="CA312" />
+        	<Button
+            	style="@style/BlueButton"
+            	android:text="CA312" />
 
-        <Button
-            style="@style/BlueButton"
-            android:text="CA313" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CA314" />
-
-        <Button
-            style="@style/BlueButton"
-            android:layout_weight="1"
-            android:text="CA315" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CB311" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CB312" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CB313" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CB314" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CB315" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CC311" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CC312" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CC313" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CC314" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="CC315" />
-
-        <Button
-            style="@style/BlueButton"
-            android:text="Other" />
-    </LinearLayout>
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CA313" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CA314" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:layout_weight="1"
+	            android:text="CA315" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CB311" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CB312" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CB313" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CB314" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CB315" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CC311" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CC312" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CC313" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CC314" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="CC315" />
+	
+	        <Button
+	            style="@style/BlueButton"
+	            android:text="Other" />
+	    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
