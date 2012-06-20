@@ -23,7 +23,7 @@ public class TopInfoView extends LinearLayout {
 		
 		LayoutInflater layoutInflater = (LayoutInflater) 
 		getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		layoutInflater.inflate(R.layout.tops, this, true);
+		layoutInflater.inflate(R.layout.bazaar_list_item, this, true);
 		
 		TextView firstName = (TextView) findViewById(R.string.firstname);
 		firstName.setText(tInfo.getFirstName());
